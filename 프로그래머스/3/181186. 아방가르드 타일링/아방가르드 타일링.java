@@ -25,6 +25,6 @@ class Solution {
             dp[i] = (dp[i-1] + dp[i-2]*2 + dp[i-3]*5 + dp2[i-4]*2 + dp2[i-5]*2 + dp2[i-6]*4)%MOD;
             dp2[i] = (dp[i] + dp2[i-3])%MOD;
         }
-        return Math.toIntExact(dp[n]);
+        return (int)dp[n];
     }
 }
