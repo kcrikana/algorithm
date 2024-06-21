@@ -2,10 +2,11 @@ import java.util.*;
 class Solution {
     public int[] solution(String s) {
         ArrayList<Integer> list = new ArrayList<>();
+        // LinkedHashSet<Integer> set = new LinkedHashSet<>();
         int len = s.length();
         String str = s.substring(2,len-2).replace("},{", "-");
         String[] arr = str.split("-");
-        Arrays.sort(arr, (o1,o2) -> Integer.compare(o1.length(),o2.length()));
+        Arrays.sort(arr, (o1,o2) -> o1.length()-o2.length());
         for(String now : arr) {
             StringTokenizer st = new StringTokenizer(now, ",");
             while(st.hasMoreTokens()) {
