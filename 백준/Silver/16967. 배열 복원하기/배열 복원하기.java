@@ -22,10 +22,6 @@ public class Main {
 					if(j<Y) A[i][j] = Integer.parseInt(st.nextToken());
 					else A[i][j] = Integer.parseInt(st.nextToken())-A[i-X][j-Y];
 				}
-			}
-		}
-		for(int i=0; i<H; i++) {
-			for(int j=0; j<W; j++) {
 				sb.append(A[i][j]).append(' ');
 			}
 			sb.append('\n');
