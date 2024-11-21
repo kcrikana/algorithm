@@ -23,7 +23,7 @@ public class Main {
 		for(int i=0; i<M; i++) {
 			int now = Integer.parseInt(st.nextToken());
 			if(i == 0) start = now;
-			else if(parent[start] != func(now)) {
+			else if(parent[start] != parent[now]) {
 				System.out.println("NO");
 				return;
 			}
