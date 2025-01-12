@@ -23,6 +23,7 @@ public class Main {
 
 	static void dfs(int row, int col) {
 		ans = Math.max(ans, Integer.bitCount(num));
+		if(ans == 26) return;
 		for(int i=0; i<4; i++) {
 			int dRow = dr[i] + row;
 			int dCol = dc[i] + col;
