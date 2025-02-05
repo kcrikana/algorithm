@@ -17,10 +17,10 @@ public class Main {
 				continue;
 			}
 			int[] word = new int[26];
-			for(char ch : W.toCharArray()) word[ch-'a']++;
+            int len = W.length();
+			for(int i=0; i<len; i++) word[W.charAt(i)-'a']++;
 			int three = Integer.MAX_VALUE;
 			int four = -1;
-			int len = W.length();
 			for(int i=0; i<len; i++) {
 				if(word[W.charAt(i)-'a'] < K) continue;
 				int count = 1;
