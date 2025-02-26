@@ -21,8 +21,8 @@ public class Main {
 				start = mid + 1;
 				continue;
 			}
-			int sum = 0;
-			int skill = mid;
+			long sum = 0;
+			long skill = mid;
 			int idx = 0;
 			for(int i=0; i<M; i++) {
 				for(int j=idx; j<N; j++) {
