@@ -23,8 +23,9 @@ public class Main {
 		int X = Integer.parseInt(st.nextToken());
 		int Y = Integer.parseInt(st.nextToken());
 		Collections.sort(list, (o1, o2) -> (o1.virus-o2.virus));
-		while(!list.isEmpty()) {
-			Node now = list.poll();
+		Queue<Node> q = list;
+		while(!q.isEmpty()) {
+			Node now = q.poll();
 			if(now.time == S) break;
 			for(int k=0; k<4; k++) {
 				int dRow = dr[k] + now.row;
@@ -32,7 +33,7 @@ public class Main {
 				if(dRow < 0 || dCol < 0 || dRow >= N || dCol >= N
 					|| examiner[dRow][dCol] != 0) continue;
 				examiner[dRow][dCol] = now.virus;
-				list.add(new Node(dRow, dCol, now.virus, now.time+1));
+				q.add(new Node(dRow, dCol, now.virus, now.time+1));
 			}
 		}
 		System.out.println(examiner[X-1][Y-1]);
